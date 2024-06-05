@@ -1,0 +1,412 @@
+*{
+    font-family: "Nunito", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+body{
+    background-color: #DBE9F4;
+}
+::-webkit-scrollbar{
+    width: 12px;
+}
+::-webkit-scrollbar-thumb{
+    background: linear-gradient(transparent,#30ff00);
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover{
+    background: linear-gradient(transparent,#00c6ff);
+}
+.navElement{
+    text-decoration: none;
+}
+.navbar{
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+}
+#earth{
+    margin-top: -13px;
+    font-size: 30px;
+    margin-right: auto;
+    font-weight: 200;
+}
+.navElement{
+    font-weight: 350;
+    font-size: 18px;
+    color: #045608;
+    padding: 20px;
+    transition: 0.25s;
+    border-radius: 10px;
+}
+.elements:hover{
+    color: #00ccff;
+}
+.mainContainer{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+}
+.txtContainer{
+    animation: firstPageleft linear;
+    animation-timeline: view();
+    animation-range: entry 10% exit;
+    transform: translateX(180px);
+    width: 40%;
+    margin-left: 4%;
+    margin-top: 4%;
+    color: rgb(1, 32, 87);
+}
+.saveHead{
+    font-weight: 200;
+    margin-bottom: 35px;
+}
+.saveHead::selection,.savePera::Selection{
+    background-color: #00ccff;
+    color: #045608;
+}
+
+.savePera{
+    margin-top: 10%;
+}
+.earthButton{
+    padding: 10px;
+    margin-top: 10%;
+    background-color: rgb(1, 32, 87);
+    color: #fafafa;
+    font-size: 20px;
+    border: none;
+    font-weight: 200;
+    border-radius: 10px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 4px 4px 15px black;
+}
+.earthButton:hover{
+    background-color: #00eaff;
+    color: rgb(1, 32, 87);
+}
+.imgConatiner{
+    animation: firstPageRight linear;
+    animation-timeline: view();
+    animation-range: entry 10% exit;
+    transform: translateX(-380px);
+    margin-left: auto;
+    display: flex;
+    justify-content: flex-end;
+}
+.imageTree{
+    margin-top: 3%;
+    width: 650px;
+    height: 600px;
+}
+.boxes{
+    cursor: pointer;
+    width: 40%;
+    height: 70%;
+    background-color: #ffffffa5;
+    /* display: flex; */
+    justify-content: flex-start;
+    margin: 50px;
+    border-radius: 25px;
+    box-shadow: 10px 10px 50px  rgb(66, 66, 66);
+    transition: 0.4s;
+    /* align-content: center; */
+    /* border: 5px solid #00eaff; */
+}
+.box1{
+    animation: appearLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.box2{
+    animation: appearDown linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.box3{
+    animation: appearRight linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.secondContainer{
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+#pageUpArrow{
+    display: inline;
+    position: relative;
+    top: 42vh;
+    right: 2vh;
+    color: rgb(1, 32, 87);
+    cursor: pointer;
+}
+#pageUpArrowForThirdContainer{
+    display: inline;
+    position: relative;
+    color: rgb(1, 32, 87);
+    cursor: pointer;
+    left: 204vh;
+    bottom: 3vh;
+}
+.iconClickTextDecoNone{
+    text-decoration: none;
+}
+.aboutUsHead{
+    position: absolute;
+    transform: translate(95vh,-45vh);
+    /* z-index: 1000; */
+    color: rgb(1, 32, 87);
+    font-weight: 200;
+}
+.boxImage{
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px rgb(66, 66, 66);
+    margin-top: 10%;
+    margin-left: 12.6%;
+    width: 75%;
+    height: 45%;
+    /* border: 3px solid #00eaff; */
+}
+.boxPera{
+    width: 75%;
+    text-align: center;
+    /* align-items: center; */
+    margin-left: 12.6%;
+    margin-top: 10%;
+    color: rgb(1, 32, 87)
+}
+.thirdContainer{
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+}
+.contactInput{
+    animation: appearRight linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    padding: 5px;
+    margin-left: 40vh;
+    width: 60%;
+    height: 6%;
+    border: 2.5px solid rgba(103, 103, 103, 0.504);
+    font-size: 20px;
+}
+.contactInput:focus{
+    outline: none;
+}
+.contactHead{
+    margin-bottom: 3vh;
+    margin-left: 95vh;
+    color: rgb(1, 32, 87);
+    font-weight: 200;
+}
+.inputLabel{
+    animation: appearLeft linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    margin-left: 40vh;
+    color: rgb(1, 32, 87);
+}
+#yourMessageTextarea{
+    animation: appearRight linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+    padding: 5px;
+    margin-left: 40vh;
+    width: 60%;
+    border: 2.5px solid rgba(103, 103, 103, 0.504);
+    font-size: 20px;
+    resize: none;
+}
+#yourMessageTextarea:focus{
+    outline: none;
+}
+#submitButton{
+    margin-bottom: 8vh;
+    margin-left: 40vh;
+    width: 10%;
+    height: 8%;
+    font-size: 22px;
+    background-color: rgb(1, 32, 87);
+    color: #fafafa;
+    border: none;
+    font-weight: 200;
+    border-radius: 7px;
+    transition: 0.3s;
+    cursor: pointer;
+    box-shadow: 4px 4px 15px black;
+    margin-top: 2%;
+}
+#submitButton:hover{
+    background-color: #00eaff;
+    color: rgb(1, 32, 87);
+}
+.fourthContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+.donateHead{
+    font-weight: 200;
+    color: rgb(1, 32, 87);
+    margin-top: 3vh;
+    font-size: 5vh;
+    text-align: center;
+}
+.donationMoney{
+    font-weight: 200;
+    color: rgb(1, 32, 87);
+    margin-top: 1vh;
+    font-size: 5vh;
+    text-align: center;
+    margin-top: 7vh;
+}
+.slideMain{
+    margin-top: 5vh;
+    overflow: hidden;
+    white-space: nowrap;
+}
+.slideContainer{
+    display: inline-flex;
+    flex-direction: row;
+    white-space: nowrap;
+    animation: scroll 15s linear infinite;
+}
+.sliders{
+    cursor: pointer;
+    box-shadow: 10px 10px 10px rgb(47, 47, 47);
+    height: 40vh;
+    width: 50vh;
+    margin: 3vh;
+    background-color: #00c6ff;
+    border-radius: 3vh;
+    transition: 0.2s;
+}
+.sliders:hover{
+    box-shadow: 10px 10px 10px rgb(0, 0, 0),-10px -10px 10px black;
+}
+#slider1{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://hips.hearstapps.com/hmg-prod/images/plant-for-the-earth-royalty-free-image-1635783818.jpg?crop=0.566xw:1.00xh;0.248xw,0&resize=1200:*");
+}
+#slider2{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/free-photo/people-planting-tree-countryside_23-2149401186.jpg");
+}
+#slider3{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/premium-photo/person-planting-tree-garden_780838-431.jpg?size=626&ext=jpg&ga=GA1.1.2082370165.1716854400&semt=ais_user");
+}
+#slider4{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://contentgrid.homedepot-static.com/hdus/en_US/DTCCOMNEW/Articles/how-to-plant-a-tree-update-hero.jpg");
+}
+#slider5{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://img.freepik.com/premium-photo/group-people-planting-trees-field_1030562-6.jpg");
+}
+#slider6{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://i.natgeofe.com/n/025fa7a4-a813-4f32-bf62-ed3475fed052/NationalGeographic_2794394_square.jpg");
+}
+#slider7{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://canopy.org/wp-content/uploads/48982983297_7b85b53f23_k.jpg");
+}
+#slider8{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-image: url("https://onetreeplanted.org/cdn/shop/files/PTFI-latin_america-women_planting_sapling-mobile_1600x.jpg?v=1717161601");
+}
+.footer{
+    margin-top: auto;
+    width: 100%;
+    height: 15vh;
+    /* background-color: #00c6ff; */
+    border-top: 2px solid rgb(174, 172, 172);
+}
+.footer::before{
+    position: relative;
+    content: '';
+    background-color: #DBE9F4;
+    padding-left: 200px;
+    bottom: 1.8vh;
+}
+.footer::after{
+    position: relative;
+    content: '';
+    background-color: #DBE9F4;
+    padding-left: 200px;
+    padding-right: 100px;
+    bottom: 14.5vh;
+    left: 180vh;
+}
+.socialContainer{
+    display: flex;
+    justify-content: center;
+}
+.socialAtag{
+    margin-left: 4vh;
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: 0.25s;
+}
+.socialAtag:hover{
+    color: #008bfd;
+}
+.copyright{
+    font-weight: 300;
+    font-size: 18px;
+    margin-top: 3.5vh;
+    margin-left: 84vh;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
+@keyframes appearLeft {
+    from{
+        transform: translateX(-900px)
+    }
+}
+@keyframes appearRight {
+    from{
+        transform: translateX(900px);
+    }
+}
+@keyframes appearDown {
+    from{
+        transform: translateY(900px);
+    }
+}
+@keyframes firstPageleft{
+    to{
+        transform: translateX(-300px);
+    }
+}
+@keyframes firstPageRight {
+    to{
+        transform: translateX(500px);
+    }
+}
